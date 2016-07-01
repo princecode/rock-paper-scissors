@@ -14,7 +14,7 @@ namespace RockPaperScissors
             // Add AIs by filling in lines like the ones below
             { "Spider-Man", new RandomAI() },
             { "The Hulk", new StubbornAI(0) },
-            //{ "Other", new OtherAI() },
+           { "Deadpool", new ShortAttentionSpanAI() },
             //{ "YetAnother", new YetAnotherAI() },
         };
 
@@ -70,7 +70,7 @@ namespace RockPaperScissors
         }
 
 
-        static int[,] winnerMatrix = 
+        static int[,] winnerMatrix =
         {  // R  P  S p1 // p2
             { 0, 1, 2 }, // R
             { 2, 0, 1 }, // P
