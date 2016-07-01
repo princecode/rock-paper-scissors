@@ -16,7 +16,7 @@ namespace RockPaperScissors
         int playersPreviousMove;
         public void SaveResult(int myMove, int otherMove)
         {
-            playersPreviousMove = myMove;     
+            playersPreviousMove = myMove;              
                         
         }
     }
