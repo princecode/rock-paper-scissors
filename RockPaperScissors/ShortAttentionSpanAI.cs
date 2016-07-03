@@ -8,15 +8,42 @@ namespace RockPaperScissors
 {
     class ShortAttentionSpanAI : IPlayer
     {
-       
+
+        int opponentMove;        
+    
         public int NextMove()
         {
-            return playersPreviousMove;
+
+
+            int aiMove;
+
+            if (opponentMove == 0)
+            {
+                aiMove = 1;
+            }
+            else if (opponentMove == 1)
+            {
+                aiMove = 2;
+            }
+            else if (opponentMove == 2)
+            {
+                aiMove = 0;
+            }
+            else
+            {
+                aiMove = 2;
+            }
+
+            return aiMove;
+
+
         }
-        int playersPreviousMove;
+
+
+        
         public void SaveResult(int myMove, int otherMove)
         {
-            playersPreviousMove = myMove;              
+            opponentMove = otherMove;              
                         
         }
     }
